@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert | Nexus Web Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="language-selector">
+        <span onclick="setLanguage('es')">ESP</span>
+        <span onclick="setLanguage('en')">ENG</span>
+        <span onclick="setLanguage('fr')">FRA</span>
+        <span onclick="setLanguage('ht')">KRE</span>
+    </nav>
+
+    <header class="container">
+        <img src="boss.jpeg" alt="Robert" class="profile-img">
+        <h1>Robert</h1>
+        <div class="tagline-container">
+            <p class="lang es">Fundador de <strong>Nexus Web Design</strong> | Desarrollador Web & Soluciones Tecnológicas Globales</p>
+            <p class="lang en" style="display:none;">Founder of <strong>Nexus Web Design</strong> | Web Developer & Global Tech Solutions</p>
+            <p class="lang fr" style="display:none;">Fondateur de <strong>Nexus Web Design</strong> | Développeur Web & Solutions Technologiques Globales</p>
+            <p class="lang ht" style="display:none;">Fondatè <strong>Nexus Web Design</strong> | Web Developer & Solisyon Teknoloji pou tout mond lan</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="lang es">¿Quién soy?</h2>
+        <h2 class="lang en" style="display:none;">Who am I?</h2>
+        <h2 class="lang fr" style="display:none;">Qui suis-je?</h2>
+        <h2 class="lang ht" style="display:none;">Kiyès mwen ye?</h2>
+
+        <div class="bio-card">
+            <p class="lang es">Soy Robert, Fundador de Nexus Web Design. Creamos soluciones digitales de alto impacto para empresas en cualquier parte del mundo.</p>
+            <p class="lang en" style="display:none;">I am Robert, Founder of Nexus Web Design. We create high-impact digital solutions for companies anywhere in the world.</p>
+            <p class="lang fr" style="display:none;">Je suis Robert, Fondateur de Nexus Web Design. Nous créons des solutions digitales à fort impact pour des entreprises partout dans le monde.</p>
+            <p class="lang ht" style="display:none;">Mwen se Robert, Fondatè Nexus Web Design. Nou kreye solisyon dijital ki gen gwo enpak pou antrepriz kèlkeswa kote yo ye nan mond lan.</p>
+        </div>
+
+        <h2 class="lang es">Mis Proyectos</h2>
+        <h2 class="lang en" style="display:none;">My Projects</h2>
+        <h2 class="lang fr" style="display:none;">Mes Projets</h2>
+        <h2 class="lang ht" style="display:none;">Pwojè mwen reyalize</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Shékina Multi-Services</h3>
+                <p class="lang es">Plataforma completa con sistema de pedidos por WhatsApp.</p>
+                <p class="lang en" style="display:none;">Complete platform with WhatsApp ordering system.</p>
+                <p class="lang fr" style="display:none;">Plateforme complète avec système de commande WhatsApp.</p>
+                <p class="lang ht" style="display:none;">Platfòm konplè ak sistèm kòmande WhatsApp.</p>
+                
+                <a href="#" class="btn-gold lang es">Ver Sitio</a>
+                <a href="#" class="btn-gold lang en" style="display:none;">View Site</a>
+                <a href="#" class="btn-gold lang fr" style="display:none;">Voir le Site</a>
+                <a href="#" class="btn-gold lang ht" style="display:none;">Wè Sit la</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Salón Muhel</h3>
+                <p class="lang es">Landing page "Luxury" para salón de belleza VIP.</p>
+                <p class="lang en" style="display:none;">"Luxury" landing page for VIP beauty salon.</p>
+                <p class="lang fr" style="display:none;">Landing page "Luxury" pour salon de beauté VIP.</p>
+                <p class="lang ht" style="display:none;">Landing page "Luxury" pou salon bote VIP.</p>
+                
+                <a href="#" class="btn-gold lang es">Ver Sitio</a>
+                <a href="#" class="btn-gold lang en" style="display:none;">View Site</a>
+                <a href="#" class="btn-gold lang fr" style="display:none;">Voir le Site</a>
+                <a href="#" class="btn-gold lang ht" style="display:none;">Wè Sit la</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Nexus Web Design</strong></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <p>Email: contact@nexusweb.com</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            // 1. Kache TOUT sa ki gen klas 'lang'
+            var allElements = document.querySelectorAll('.lang');
+            allElements.forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            // 2. Montre sèlman lang ki koresponn lan
+            var selectedElements = document.querySelectorAll('.lang.' + lang);
+            selectedElements.forEach(function(el) {
+                if (el.tagName === 'A') {
+                    el.style.display = 'inline-block';
+                } else {
+                    el.style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
